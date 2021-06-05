@@ -3,7 +3,9 @@
 API : <https://fakestoreapi.com/>
 
 UI:
+
 ![UI](/ui.png)
 
-test:
+Test:
+
 ![UI](/test_ui.gif)
