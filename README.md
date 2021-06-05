@@ -8,4 +8,4 @@ UI:
 
 Test:
 
-![UI](/test_ui.gif)
+![UI](/ui-test.gif)
