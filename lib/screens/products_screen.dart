@@ -125,24 +125,27 @@ class ProductScreen extends StatelessWidget {
       String assetPath, Function ontap) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 10),
+      width: constraints.maxHeight * 0.15,
+      height: constraints.maxHeight * 0.15,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Container(
-            width: (constraints.maxWidth * 0.22),
-            height: constraints.maxWidth * 0.22,
+            height: constraints.maxHeight * 0.12,
             child: Stack(
               children: [
-                Center(
-                  child: CircleAvatar(
-                    radius: constraints.maxWidth * 0.1,
-                    backgroundColor: Colors.white,
-                  ),
+                CircleAvatar(
+                  radius: constraints.maxHeight * 0.1,
+                  backgroundColor: Colors.black.withOpacity(0.05),
                 ),
                 MaterialButton(
                   shape: CircleBorder(),
                   elevation: 8.0,
-                  child: SvgPicture.asset(
-                    assetPath,
+                  child: Center(
+                    child: SvgPicture.asset(
+                      assetPath,
+                      width: constraints.maxHeight * 0.09,
+                    ),
                   ),
                   onPressed: () => ontap(),
                 ),
@@ -152,8 +155,8 @@ class ProductScreen extends StatelessWidget {
           Text(
             title,
             style: TextStyle(
-                fontSize: constraints.maxWidth * 0.038,
-                fontWeight: FontWeight.w500),
+                fontSize: constraints.maxWidth * 0.026,
+                fontWeight: FontWeight.bold),
           )
         ],
       ),
